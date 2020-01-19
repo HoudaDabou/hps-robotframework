@@ -21,7 +21,7 @@ Update tests
 
 To update the tests:
 
-    hiptest-publisher -c robotframework.conf --only=tests
+    hiptest-publisher -c robotframework.conf --filename-pattern=%s.robot --only=tests
 
 The tests are generated in the [``tests``](https://github.com/hiptest/hps-robotframework/tree/master/tests) directory.
 
@@ -31,7 +31,7 @@ Run tests
 
 To build the project and run the tests, use the following command:
 
-    pybot -P src:tests tests/**/test_*
+    robot -P src:tests tests/**.robot
 
 The SUT implementation can be seen in [``src/coffee_machine.py``](https://github.com/hiptest/hps-robotframework/blob/master/src/coffee_machine.py)
 
